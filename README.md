@@ -11,7 +11,7 @@ Installieren von npm und GOLANG (https://go.dev/doc/install).
 
 Nach dem Clonen muss im geclonten Ordner die File ".env" angelegt werden. Die File muss folgenden Inhalt (versch. Attribute) enthalten:
 
-user_name = "YOUR_MYSSQL_USERNAME",         // example: "root"  
+user_name = "YOUR_MYSSQL_USERNAME",          // example: "root"  
 password = "YOUR_MYSSQL_PASSWORD",          // example: "root"  
 address = "YOUR_MYSSQL_SERVER_ADDRESS",     // example:"127.0.0.1:3306"  
 db_name = "YOUR_MYSSQL_DB_NAME"             // example: "myUber"  
