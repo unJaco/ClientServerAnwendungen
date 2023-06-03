@@ -1,0 +1,7 @@
+.map-container {
+    flex-grow: 1;
+    width: 600px;
+    height: 600px;
+    margin-left: 20px;
+}
+  

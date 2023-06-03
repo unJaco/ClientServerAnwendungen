@@ -1,0 +1,47 @@
+.ride-view {
+    display: flex;
+  }
+  
+  .ride-container {
+    flex: 1;
+    overflow: auto;
+  }
+  
+  .ride-table {
+    height: 400px; /* Set the desired fixed height */
+  }
+  
+  .ride-view table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    background-color: white;
+  }
+  
+  .ride-view th,
+  .ride-view td {
+    padding: 8px;
+    border: 1px solid black;
+    color: black;
+  }
+  
+  .ride-view th {
+    background-color: #f2f2f2;
+  }
+  
+  .ride-view td {
+    text-align: center;
+  }
+  
+  .ride-view td:nth-child(5) {
+    text-align: right;
+  }
+  
+  .ride-view td:nth-child(5)::after {
+    content: '€';
+  }
+  
+  .ride-view td:nth-child(6) {
+    text-align: center;
+  }
+  

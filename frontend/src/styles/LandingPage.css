@@ -1,0 +1,15 @@
+.landing-page {
+  height: 100%;
+  background-image: url('../assets/backgroundCar.jpg');
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, p {
+  text-align: center;
+  color: #ffffff;
+}

@@ -1,0 +1,103 @@
+basePath: /
+definitions:
+  enum_models.RideStatus:
+    enum:
+    - 0
+    - 1
+    type: integer
+    x-enum-varnames:
+    - Ongoing
+    - Completed
+  gorm.DeletedAt:
+    properties:
+      time:
+        type: string
+      valid:
+        description: Valid is true if Time is not NULL
+        type: boolean
+    type: object
+  model.Ride:
+    properties:
+      createdAt:
+        type: string
+      customerId:
+        type: integer
+      deletedAt:
+        $ref: '#/definitions/gorm.DeletedAt'
+      distance:
+        type: number
+      driverId:
+        type: integer
+      endLat:
+        type: number
+      endLon:
+        type: number
+      id:
+        type: integer
+      price:
+        type: number
+      rating:
+        type: integer
+      startLat:
+        type: number
+      startLon:
+        type: number
+      status:
+        $ref: '#/definitions/enum_models.RideStatus'
+      updatedAt:
+        type: string
+      vehicleId:
+        type: integer
+    type: object
+host: localhost:8080
+info:
+  contact: {}
+  description: This is an API to manage Users, Vehicles and Rides.
+  title: UberClientServer API
+  version: "1.0"
+paths:
+  /api/ride/:id:
+    get:
+      description: Get Ride by id.
+      parameters:
+      - description: id to filter by
+        in: query
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Ride'
+        "404":
+          description: ride not found
+          schema:
+            type: string
+      summary: Get Ride by id
+      tags:
+      - Ride
+  /api/ride/customer/:id:
+    get:
+      description: Get all Rides from one customer.
+      parameters:
+      - description: id to filter by
+        in: query
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Ride'
+            type: array
+      summary: Get all Rides from one customer
+      tags:
+      - Ride
+swagger: "2.0"

@@ -1,0 +1,96 @@
+.booking-container {
+  height: 100vh;
+  background-image: url('../assets/backgroundCar.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-page {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+  width: 300px;
+}
+
+.heading {
+  color: white;
+}
+
+.inputForm input {
+  margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+.label {
+  margin-bottom: 5px;
+}
+
+.booking-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.map-container {
+  flex-grow: 1;
+  width: 600px;
+  height: 600px;
+  margin-left: 20px;
+}
+
+.react-mapbox-ac-menu {
+  width: auto;
+  position: absolute;
+  z-index: 9999;
+  background-color: #fff;
+  border: 1px solid #000000;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.MuiPaper-root {
+  display: inline-grid;
+  grid-template-columns: 50px auto;
+  align-items: center;
+  width: 100%;
+  padding-left: 12px;
+}
+
+div .react-mapbox-ac-input {
+  width: 95%;
+}
+
+.react-mapbox-ac-input {
+  border: none;
+  outline: none;
+  background: rgb(255, 255, 255);
+  margin: 20px 5px 5px 5px;
+  padding: 7px;
+  border-radius: 7px;
+}
+
+.react-mapbox-ac-suggestion {
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.react-mapbox-ac-suggestion:hover {
+  background-color: #000000;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}

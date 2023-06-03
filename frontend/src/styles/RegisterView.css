@@ -1,0 +1,10 @@
+.register-view {
+    height: 100vh;
+    background-image: url('../assets/backgroundCar.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    justify-content: center;
+  }

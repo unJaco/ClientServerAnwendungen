@@ -1,0 +1,155 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is an API to manage Users, Vehicles and Rides.",
+        "title": "UberClientServer API",
+        "contact": {},
+        "version": "1.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "paths": {
+        "/api/ride/:id": {
+            "get": {
+                "description": "Get Ride by id.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Ride"
+                ],
+                "summary": "Get Ride by id",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "id to filter by",
+                        "name": "id",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/model.Ride"
+                        }
+                    },
+                    "404": {
+                        "description": "ride not found",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/ride/customer/:id": {
+            "get": {
+                "description": "Get all Rides from one customer.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Ride"
+                ],
+                "summary": "Get all Rides from one customer",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "id to filter by",
+                        "name": "id",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/model.Ride"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "enum_models.RideStatus": {
+            "type": "integer",
+            "enum": [
+                0,
+                1
+            ],
+            "x-enum-varnames": [
+                "Ongoing",
+                "Completed"
+            ]
+        },
+        "gorm.DeletedAt": {
+            "type": "object",
+            "properties": {
+                "time": {
+                    "type": "string"
+                },
+                "valid": {
+                    "description": "Valid is true if Time is not NULL",
+                    "type": "boolean"
+                }
+            }
+        },
+        "model.Ride": {
+            "type": "object",
+            "properties": {
+                "createdAt": {
+                    "type": "string"
+                },
+                "customerId": {
+                    "type": "integer"
+                },
+                "deletedAt": {
+                    "$ref": "#/definitions/gorm.DeletedAt"
+                },
+                "distance": {
+                    "type": "number"
+                },
+                "driverId": {
+                    "type": "integer"
+                },
+                "endLat": {
+                    "type": "number"
+                },
+                "endLon": {
+                    "type": "number"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "price": {
+                    "type": "number"
+                },
+                "rating": {
+                    "type": "integer"
+                },
+                "startLat": {
+                    "type": "number"
+                },
+                "startLon": {
+                    "type": "number"
+                },
+                "status": {
+                    "$ref": "#/definitions/enum_models.RideStatus"
+                },
+                "updatedAt": {
+                    "type": "string"
+                },
+                "vehicleId": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}
