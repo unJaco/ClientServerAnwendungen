@@ -18,9 +18,9 @@ db_name = "YOUR_MYSSQL_DB_NAME"             // example: "myUber"
 
 
 ## SetUp Frontend
-Um das Frontend zu starten muss man in den frontend folder navigieren und npm start ausführen.
-Falls einige Dependencies nicht vorhanden sind muss "npm i --legacy-peer-deps" ausgeführt werden.
-Danach kann erneut "npm start" eingegeben werden. 
+Um das Frontend zu starten muss man in den frontend folder navigieren und npm start ausführen.  
+Falls einige Dependencies nicht vorhanden sind muss "npm i --legacy-peer-deps" ausgeführt werden.  
+Danach kann erneut "npm start" eingegeben werden.   
 
 
 ## Start Application
