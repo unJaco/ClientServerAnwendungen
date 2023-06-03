@@ -18,10 +18,9 @@ db_name = "YOUR_MYSSQL_DB_NAME"             // example: "myUber"
 
 
 ## SetUp Frontend
-To start the frontend navigat to the frontend folder and run npm start  
-you maybe need to install node.js   
-you maybe need to install the router-dom package (npm install react-router-dom).
-Wenn der Befehl "react-scripts" nicht ausgeführt werden kann, muss der Befehl "npm i --legacy-peer-deps" eingegeben werden. Danach kann erneut "npm start" eingegeben werden. 
+Um das Frontend zu starten muss man in den frontend folder navigieren und npm start ausführen.
+Falls einige Dependencies nicht vorhanden sind muss "npm i --legacy-peer-deps" ausgeführt werden.
+Danach kann erneut "npm start" eingegeben werden. 
 
 
 ## Start Application
